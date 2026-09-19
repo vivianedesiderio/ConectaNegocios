@@ -26,6 +26,10 @@ def criar_banco():
     conexao.close()
 
 
+criar_banco()
+
+
+
 @app.route("/")
 def home():
     conexao = sqlite3.connect("conectanegocios.db")
