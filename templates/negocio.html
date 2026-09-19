@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>{{ negocio['nome'] }} | ConectaNegócios</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div class="cabecalho">
+
+            <div class="marca">
+    <a href="/">
+        <img
+            src="{{ url_for('static', filename='img/logo-conectanegocios.png') }}"
+            alt="ConectaNegócios"
+            class="logo-conecta">
+    </a>
+</div>
+
+            <nav>
+                <a href="/">Início</a>
+                <a href="/#negocios">Explorar negócios</a>
+                <a href="/cadastro" class="btn-cadastro">
+                    Cadastre seu negócio
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="perfil-negocio">
+
+            <div class="icone-negocio">🏪</div>
+
+            <span class="tag">
+                {{ negocio['categoria']|capitalize }}
+            </span>
+
+            <h2>{{ negocio['nome'] }}</h2>
+
+            <p class="descricao-negocio">
+                {{ negocio['descricao'] }}
+            </p>
+
+
+            <div class="informacoes-negocio">
+
+                <p>
+                    <strong>📍 Localização</strong><br>
+                    {{ negocio['bairro'] }} -
+                    {{ negocio['cidade'] }}
+                </p>
+
+                <p>
+                    <strong>🛍️ Produtos e serviços</strong><br>
+                    {{ negocio['produtos'] }}
+                </p>
+
+            </div>
+
+
+            <div class="contato-negocio">
+
+                {% if negocio['whatsapp'] %}
+
+<a href="{{ whatsapp_link }}"
+   target="_blank"
+   class="botao-whatsapp">
+    💬 Conversar pelo WhatsApp
+</a>
+
+{% endif %}
+
+
+                {% if negocio['instagram'] %}
+
+<p>
+    <strong>Instagram:</strong>
+    <a href="https://www.instagram.com/{{ negocio['instagram']|replace('@', '') }}"
+       target="_blank">
+        {{ negocio['instagram'] }}
+    </a>
+</p>
+
+{% endif %}
+
+            </div>
+
+
+            <a href="/" class="botao-ver-negocio">
+                ← Voltar para os negócios
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
