@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ConectaNegócios</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <header>
+            <div class="cabecalho">
+
+                <div class="marca">
+                    <h1>ConectaNegócios</h1>
+                    <p>Conectando quem vende a quem quer comprar.</p>
+                </div>
+
+                <nav>
+                    <a href="#">Início</a>
+                    <a href="#negocios">Explorar negócios</a>
+                    <a href="#como-funciona">Como funciona</a>
+                    <a href="/cadastro" class="btn-cadastro">Cadastre seu negócio</a>
+                </nav>
+
+            </div>
+        </header>
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <h2>Encontre negócios perto de você</h2>
+
+            <p>
+                Descubra produtos e serviços oferecidos
+                por empreendedores da nossa comunidade.
+            </p>
+
+            <form class="busca" id="form-busca">
+
+                <input type="text" id="campo-busca" placeholder="O que você está procurando?" autocomplete="off">
+
+                <button type="submit">
+                    Pesquisar
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="categorias">
+
+            <h2>Explore por categoria</h2>
+
+            <div class="lista-categorias">
+
+                <div class="categoria" data-categoria="todos">
+                    🔎
+                    <p>Todos</p>
+                </div>
+
+                <div class="categoria" data-categoria="beleza">
+                    ✂️
+                    <p>Beleza</p>
+                </div>
+
+                <div class="categoria" data-categoria="semijoias">
+                    💎
+                    <p>Semijoias</p>
+                </div>
+
+                <div class="categoria" data-categoria="saboaria">
+                    🧼
+                    <p>Saboaria</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="como-funciona" id="como-funciona">
+
+            <div class="titulo-secao">
+                <h2>Como funciona</h2>
+
+                <p>
+                    Encontre empreendedores locais de forma simples,
+                    rápida e próxima de você.
+                </p>
+            </div>
+
+            <div class="passos">
+
+                <div class="passo">
+                    <div class="numero-passo">1</div>
+                    <div class="icone-passo">🔎</div>
+
+                    <h3>Encontre</h3>
+
+                    <p>
+                        Pesquise por produtos, serviços ou escolha
+                        uma categoria.
+                    </p>
+                </div>
+
+                <div class="passo">
+                    <div class="numero-passo">2</div>
+                    <div class="icone-passo">🏪</div>
+
+                    <h3>Conheça</h3>
+
+                    <p>
+                        Acesse o perfil do negócio e conheça seus
+                        produtos e serviços.
+                    </p>
+                </div>
+
+                <div class="passo">
+                    <div class="numero-passo">3</div>
+                    <div class="icone-passo">💬</div>
+
+                    <h3>Conecte-se</h3>
+
+                    <p>
+                        Entre em contato diretamente com o
+                        empreendedor.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="negocios" id="negocios">
+
+            <div class="titulo-secao">
+                <h2>Negócios da comunidade</h2>
+                <p>Conheça alguns empreendedores e serviços disponíveis na plataforma.</p>
+            </div>
+
+            <div class="lista-negocios">
+
+                <article class="card-negocio" data-categoria="beleza"
+                    data-busca="beleza funcional beleza salão salao cabelo cabelos produtos profissionais bem-estar capão capao imbuia curitiba">
+
+                    <div class="icone-negocio">✂️</div>
+
+                    <span class="tag">Beleza</span>
+
+                    <h3>Beleza Funcional</h3>
+
+                    <p>
+                        Salão de beleza, produtos profissionais para cabelos,
+                        beleza e bem-estar.
+                    </p>
+
+                    <span class="localizacao">
+                        📍 Capão do Imbuia - Curitiba/PR
+                    </span>
+
+                    <a class="botao-ver-negocio" href="/beleza-funcional">
+                        Ver negócio
+                    </a>
+
+                </article>
+
+
+                <article class="card-negocio" data-categoria="semijoias"
+                    data-busca="missara semi-jóias semi-joias semijoias semijoia joias acessórios acessorios anéis aneis colares ouro prata uberaba curitiba">
+
+                    <div class="icone-negocio">💎</div>
+
+                    <span class="tag">Semijoias</span>
+
+                    <h3>MISSARA Semi-Jóias</h3>
+
+                    <p>
+                        Semijoias e acessórios com peças banhadas
+                        a ouro e prata.
+                    </p>
+
+                    <span class="localizacao">
+                        📍 Uberaba - Curitiba/PR
+                    </span>
+
+                    <a class="botao-ver-negocio" href="/missara">
+                        Ver negócio
+                    </a>
+
+                </article>
+
+
+                <article class="card-negocio" data-categoria="saboaria"
+                    data-busca="momentomeu momêntomeu saboaria bem-estar sabonete sabonetes artesanais vela velas aromáticas aromaticas água aguas águas lençóis lencois cajuru curitiba">
+
+                    <div class="icone-negocio">🧼</div>
+
+                    <span class="tag">Saboaria e Bem-estar</span>
+
+                    <h3>MOMÊntomeu</h3>
+
+                    <p>
+                        Experiências de bem-estar com sabonetes artesanais,
+                        velas aromáticas e águas para lençóis.
+                    </p>
+
+                    <span class="localizacao">
+                        📍 Cajuru - Curitiba/PR
+                    </span>
+
+                    <a class="botao-ver-negocio" href="/momentomeu">
+                        Ver negócio
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    </main>
+
+    <script>
+        const formBusca = document.getElementById("form-busca");
+        const campoBusca = document.getElementById("campo-busca");
+        const cardsNegocios = document.querySelectorAll(".card-negocio");
+
+        formBusca.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const termo = campoBusca.value
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .trim();
+
+            cardsNegocios.forEach(function (card) {
+
+                const dadosBusca = card.dataset.busca
+                    .toLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "");
+
+                if (dadosBusca.includes(termo)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+
+            });
+        });
+
+        const categoriaBeleza = document.querySelector(
+            '.categoria[data-categoria="beleza"]'
+        );
+
+        categoriaBeleza.addEventListener("click", function () {
+
+            cardsNegocios.forEach(function (card) {
+
+                if (card.dataset.categoria === "beleza") {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+
+            });
+
+        });
+
+        const categoriaSemijoias = document.querySelector(
+            '.categoria[data-categoria="semijoias"]'
+        );
+
+        categoriaSemijoias.addEventListener("click", function () {
+
+            cardsNegocios.forEach(function (card) {
+
+                if (card.dataset.categoria === "semijoias") {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+
+            });
+
+        });
+
+        const categoriaSaboaria = document.querySelector(
+            '.categoria[data-categoria="saboaria"]'
+        );
+
+        categoriaSaboaria.addEventListener("click", function () {
+
+            cardsNegocios.forEach(function (card) {
+
+                if (card.dataset.categoria === "saboaria") {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+
+            });
+
+        });
+
+
+        const categoriaTodos = document.querySelector(
+            '.categoria[data-categoria="todos"]'
+        );
+
+        categoriaTodos.addEventListener("click", function () {
+
+            cardsNegocios.forEach(function (card) {
+                card.style.display = "";
+            });
+
+            campoBusca.value = "";
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>

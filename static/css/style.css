@@ -1,0 +1,856 @@
+/* ==============================
+   CONECTANEGÓCIOS
+   Estilo principal da aplicação
+   ============================== */
+
+
+/* Configuração geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f9f8;
+    color: #263238;
+}
+
+
+/* ==============================
+   CABEÇALHO
+   ============================== */
+
+header {
+    background-color: #ffffff;
+    padding: 22px 8%;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #607d7b;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+   ============================== */
+
+main {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ==============================
+   ÁREA PRINCIPAL / BUSCA
+   ============================== */
+
+.hero {
+    text-align: center;
+    padding: 90px 20px 70px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #607d7b;
+    margin-bottom: 30px;
+}
+
+
+/* Campo de pesquisa */
+
+.busca {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.busca input {
+    width: 500px;
+    padding: 16px;
+
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+
+/* Botão pesquisar */
+
+.busca button {
+    padding: 16px 30px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #176b63;
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.busca button:hover {
+    background-color: #12564f;
+}
+
+
+/* ==============================
+   CATEGORIAS
+   ============================== */
+
+.categorias {
+    text-align: center;
+    padding: 40px 0 80px;
+}
+
+.categorias h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+
+/* Organização dos cards */
+
+.lista-categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+
+/* Card de cada categoria */
+
+.categoria {
+    background-color: white;
+
+    width: 160px;
+    padding: 28px 15px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* Efeito quando passa o mouse */
+
+.categoria:hover {
+    transform: translateY(-5px);
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+   Celular e telas menores
+   ============================== */
+
+@media (max-width: 768px) {
+
+    main {
+        width: 92%;
+    }
+
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .busca {
+        flex-direction: column;
+    }
+
+    .busca input {
+        width: 100%;
+    }
+
+    .busca button {
+        width: 100%;
+    }
+}
+/* ==============================
+   MENU SUPERIOR
+   ============================== */
+
+.cabecalho {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.marca h1 {
+    margin-bottom: 5px;
+}
+
+.marca p {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: #263238;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #176b63;
+}
+
+nav .btn-cadastro {
+    background-color: #176b63;
+    color: white;
+
+    padding: 12px 18px;
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+nav .btn-cadastro:hover {
+    background-color: #12564f;
+    color: white;
+}
+
+
+/* Menu em telas menores */
+
+@media (max-width: 900px) {
+
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+/* ==============================
+   NEGÓCIOS DA COMUNIDADE
+   ============================== */
+
+.negocios {
+    padding: 70px 0 100px;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-secao h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.titulo-secao p {
+    color: #607d7b;
+}
+
+.lista-negocios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card-negocio {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.icone-negocio {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e7f3f1;
+    color: #176b63;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.card-negocio h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.card-negocio p {
+    color: #607d7b;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.localizacao {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.card-negocio button {
+    width: 100%;
+    padding: 12px;
+
+    background-color: transparent;
+    color: #176b63;
+
+    border: 1px solid #176b63;
+    border-radius: 8px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-negocio button:hover {
+    background-color: #176b63;
+    color: white;
+}
+
+@media (max-width: 800px) {
+
+    .lista-negocios {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   PERFIL DO NEGÓCIO
+========================================= */
+
+.perfil-negocio {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 50px 30px 80px;
+}
+
+.voltar {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #16786f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+
+/* Cabeçalho do perfil */
+
+.cabecalho-perfil {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 30px;
+}
+
+.icone-perfil {
+    width: 90px;
+    height: 90px;
+    border-radius: 18px;
+    background: #e8f5f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+}
+
+.cabecalho-perfil h2 {
+    font-size: 32px;
+    margin: 10px 0 8px;
+    color: #172b34;
+}
+
+.localizacao {
+    color: #65777c;
+}
+
+
+/* Tag da categoria */
+
+.tag {
+    display: inline-block;
+    background: #e4f4f1;
+    color: #16786f;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* Sobre o negócio */
+
+.sobre-negocio {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.sobre-negocio h3,
+.produtos-servicos h3,
+.contato-negocio h3 {
+    font-size: 23px;
+    color: #172b34;
+    margin-bottom: 15px;
+}
+
+.sobre-negocio p {
+    line-height: 1.7;
+    color: #53686e;
+}
+
+
+/* Produtos e serviços */
+
+.produtos-servicos {
+    margin-bottom: 35px;
+}
+
+.lista-servicos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.servico {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.servico span {
+    font-size: 32px;
+}
+
+.servico h4 {
+    margin: 15px 0 8px;
+    font-size: 18px;
+    color: #172b34;
+}
+
+.servico p {
+    color: #65777c;
+    line-height: 1.5;
+}
+
+
+/* Contato */
+
+.contato-negocio {
+    background: #edf7f5;
+    padding: 35px;
+    border-radius: 18px;
+}
+
+.contato-negocio p {
+    color: #53686e;
+    margin-bottom: 22px;
+}
+
+.botoes-contato {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.botao-whatsapp,
+.botao-instagram {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.botao-whatsapp {
+    background: #16786f;
+    color: white;
+}
+
+.botao-instagram {
+    background: white;
+    color: #16786f;
+    border: 1px solid #16786f;
+}
+
+.botao-whatsapp:hover,
+.botao-instagram:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Responsividade do perfil */
+
+@media (max-width: 768px) {
+
+    .perfil-negocio {
+        padding: 30px 20px 60px;
+    }
+
+    .cabecalho-perfil {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .lista-servicos {
+        grid-template-columns: 1fr;
+    }
+
+    .botoes-contato {
+        flex-direction: column;
+    }
+
+    .botao-whatsapp,
+    .botao-instagram {
+        text-align: center;
+    }
+}
+
+/* Logo do negócio */
+
+.logo-negocio {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+}
+
+.icone-perfil {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* IMPORTANTE */
+    overflow: visible;
+}
+
+.logo-momentomeu {
+    width: 180px;
+    height: auto;
+    max-height: 90px;
+    object-fit: contain;
+}
+
+.cabecalho-perfil:has(.logo-momentomeu) .icone-perfil {
+    width: 190px;
+    height: 100px;
+}
+
+.botao-ver-negocio {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #14796f;
+    border-radius: 8px;
+    background-color: white;
+    color: #14796f;
+    text-align: center;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.botao-ver-negocio:hover {
+    background-color: #14796f;
+    color: white;
+}
+
+/* ==============================
+   COMO FUNCIONA
+   ============================== */
+
+.como-funciona {
+    padding: 70px 0;
+}
+
+.passos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.passo {
+    position: relative;
+    background-color: #ffffff;
+    padding: 35px 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.numero-passo {
+    position: absolute;
+    top: 15px;
+    left: 18px;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #176b63;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.icone-passo {
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.passo h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.passo p {
+    color: #607d7b;
+    line-height: 1.6;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    .passos {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ========================================
+   PÁGINA - CADASTRE SEU NEGÓCIO
+======================================== */
+
+.pagina-cadastro {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 30px 60px;
+}
+
+.titulo-cadastro {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-cadastro .tag {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.titulo-cadastro h2 {
+    font-size: 36px;
+    margin: 0 0 10px;
+    color: #172b36;
+}
+
+.titulo-cadastro p {
+    color: #557078;
+    font-size: 16px;
+}
+
+
+/* Caixa do formulário */
+
+.form-cadastro {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/* Campos */
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo-campo label {
+    font-weight: 600;
+    color: #172b36;
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+
+    border: 1px solid #cbd5d8;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    background: #ffffff;
+}
+
+.grupo-campo textarea {
+    resize: vertical;
+}
+
+
+/* Campo ocupando duas colunas */
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+
+/* Efeito ao clicar no campo */
+
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus {
+    outline: none;
+    border-color: #14796f;
+    box-shadow: 0 0 0 3px rgba(20, 121, 111, 0.10);
+}
+
+
+/* Botão */
+
+.botao-enviar-cadastro {
+    width: 100%;
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #14796f;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.botao-enviar-cadastro:hover {
+    background: #10685f;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+
+    .form-cadastro {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .campo-completo {
+        grid-column: 1;
+    }
+
+    .pagina-cadastro {
+        margin-top: 35px;
+        padding: 0 20px 40px;
+    }
+
+    .titulo-cadastro h2 {
+        font-size: 30px;
+    }
+}
+
+/* Mensagem de confirmação do cadastro */
+
+.mensagem-sucesso {
+    background: #e5f5f1;
+    border: 1px solid #b9ded6;
+    border-radius: 10px;
+
+    padding: 18px 20px;
+    margin-bottom: 25px;
+
+    color: #14685f;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mensagem-sucesso p {
+    margin: 5px 0 0;
+    font-weight: 400;
+}
+

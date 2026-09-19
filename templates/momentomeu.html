@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MOMÊntomeu | ConectaNegócios</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>ConectaNegócios</h1>
+        <p>Conectando quem vende a quem quer comprar.</p>
+    </div>
+
+    <nav>
+        <a href="/">Início</a>
+        <a href="/#negocios">Explorar negócios</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="perfil-negocio">
+
+        <a class="voltar" href="/">← Voltar para negócios</a>
+
+        <div class="cabecalho-perfil">
+
+            <div class="icone-perfil">
+                <img
+                    src="{{ url_for('static', filename='img/momentomeu.png') }}"
+                    alt="Logo MOMÊntomeu"
+                    class="logo-negocio logo-momentomeu"
+                >
+            </div>
+
+            <div>
+                <span class="tag">Saboaria e Bem-estar</span>
+
+                <h2>MOMÊntomeu</h2>
+
+                <p class="localizacao">
+                    📍 Cajuru - Curitiba/PR
+                </p>
+            </div>
+
+        </div>
+
+        <div class="sobre-negocio">
+
+            <h3>Sobre o negócio</h3>
+
+            <p>
+                Experiências de bem-estar com sabonetes artesanais,
+                velas aromáticas e águas para lençóis.
+            </p>
+
+        </div>
+
+        <div class="produtos-servicos">
+
+            <h3>Produtos</h3>
+
+            <div class="lista-servicos">
+
+                <div class="servico">
+                    <span>🧼</span>
+                    <h4>Sabonetes artesanais</h4>
+                    <p>
+                        Sabonetes artesanais desenvolvidos para transformar
+                        o banho em um momento especial de cuidado e bem-estar.
+                    </p>
+                </div>
+
+                <div class="servico">
+                    <span>🕯️</span>
+                    <h4>Velas aromáticas</h4>
+                    <p>
+                        Aromas para criar ambientes acolhedores,
+                        relaxantes e cheios de personalidade.
+                    </p>
+                </div>
+
+                <div class="servico">
+                    <span>🌸</span>
+                    <h4>Águas para lençóis</h4>
+                    <p>
+                        Fragrâncias para perfumar tecidos e proporcionar
+                        uma experiência agradável aos ambientes.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="contato-negocio">
+
+            <h3>Entre em contato</h3>
+
+            <p>
+                Gostou dos produtos?
+                Fale diretamente com a empreendedora.
+            </p>
+
+            <div class="botoes-contato">
+
+                <a class="botao-whatsapp"
+                   href="#"
+                   target="_blank">
+                    💬 Conversar pelo WhatsApp
+                </a>
+
+                <a class="botao-instagram"
+                   href="#"
+                   target="_blank">
+                    📷 Ver Instagram
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

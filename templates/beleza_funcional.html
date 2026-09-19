@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Beleza Funcional | ConectaNegócios</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>ConectaNegócios</h1>
+        <p>Conectando quem vende a quem quer comprar.</p>
+    </div>
+
+    <nav>
+        <a href="/">Início</a>
+        <a href="/#negocios">Explorar negócios</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="perfil-negocio">
+
+        <a class="voltar" href="/">← Voltar para negócios</a>
+
+        <div class="cabecalho-perfil">
+
+            <div class="icone-perfil">
+    <img
+        src="{{ url_for('static', filename='img/beleza-funcional.jpg') }}"
+        alt="Logo Beleza Funcional"
+        class="logo-negocio"
+    >
+</div>
+
+            <div>
+                <span class="tag">Beleza</span>
+
+                <h2>Beleza Funcional</h2>
+
+                <p class="localizacao">
+                    📍 Capão do Imbuia - Curitiba/PR
+                </p>
+            </div>
+
+        </div>
+
+        <div class="sobre-negocio">
+
+            <h3>Sobre o negócio</h3>
+
+            <p>
+                Salão de beleza, comercialização e distribuição
+                de produtos profissionais para cabelos, beleza
+                e bem-estar.
+            </p>
+
+        </div>
+
+        <div class="produtos-servicos">
+
+            <h3>Produtos e serviços</h3>
+
+            <div class="lista-servicos">
+
+                <div class="servico">
+                    <span>💇‍♀️</span>
+                    <h4>Serviços de salão</h4>
+                    <p>Cuidados e serviços profissionais para cabelos.</p>
+                </div>
+
+                <div class="servico">
+                    <span>🧴</span>
+                    <h4>Produtos profissionais</h4>
+                    <p>Produtos profissionais para cuidados com os cabelos.</p>
+                </div>
+
+                <div class="servico">
+                    <span>✨</span>
+                    <h4>Beleza e bem-estar</h4>
+                    <p>Produtos e soluções voltados à beleza e ao bem-estar.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="contato-negocio">
+
+            <h3>Entre em contato</h3>
+
+            <p>
+                Gostou dos produtos ou serviços?
+                Fale diretamente com o empreendedor.
+            </p>
+
+            <div class="botoes-contato">
+
+                <a class="botao-whatsapp"
+                   href="https://wa.me/5541999421225"
+                   target="_blank">
+                    💬 Conversar pelo WhatsApp
+                </a>
+
+                <a class="botao-instagram"
+                   href="https://www.instagram.com/beleza.funcional/"
+                   target="_blank">
+                    📷 Ver Instagram
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>
