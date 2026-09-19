@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <head>
     <meta charset="UTF-8">
 
@@ -74,21 +75,26 @@
 
             <div class="contato-negocio">
 
-                {% if negocio['whatsapp'] %}
+    {% if negocio['whatsapp'] %}
 
-<a href="{{ whatsapp_link }}"
-   target="_blank"
-   class="botao-whatsapp">
-    💬 Conversar pelo WhatsApp
-</a>
+    <a href="{{ whatsapp_link }}"
+       target="_blank"
+       class="botao-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+        Conversar pelo WhatsApp
+    </a>
 
 {% endif %}
 
 
-                {% if negocio['instagram'] %}
+{% if negocio['instagram'] %}
 
 <p>
-    <strong>Instagram:</strong>
+    <strong>
+        <i class="fa-brands fa-instagram"></i>
+        Instagram:
+    </strong>
+
     <a href="https://www.instagram.com/{{ negocio['instagram']|replace('@', '') }}"
        target="_blank">
         {{ negocio['instagram'] }}
