@@ -152,7 +152,9 @@
 
             <div class="lista-negocios">
 
-                <article class="card-negocio" data-categoria="beleza"
+                <article id="beleza-funcional"
+         class="card-negocio"
+         data-categoria="beleza"
                     data-busca="beleza funcional beleza salão salao cabelo cabelos produtos profissionais bem-estar capão capao imbuia curitiba">
 
                     <div class="icone-negocio">✂️</div>
@@ -177,7 +179,7 @@
                 </article>
 
 
-                <article class="card-negocio" data-categoria="semijoias"
+                <article id="missara" class="card-negocio" data-categoria="semijoias"
                     data-busca="missara semi-jóias semi-joias semijoias semijoia joias acessórios acessorios anéis aneis colares ouro prata uberaba curitiba">
 
                     <div class="icone-negocio">💎</div>
@@ -202,7 +204,7 @@
                 </article>
 
 
-                <article class="card-negocio" data-categoria="saboaria"
+                <article id="momentomeu" class="card-negocio" data-categoria="saboaria"
                     data-busca="momentomeu momêntomeu saboaria bem-estar sabonete sabonetes artesanais vela velas aromáticas aromaticas água aguas águas lençóis lencois cajuru curitiba">
 
                     <div class="icone-negocio">🧼</div>
@@ -295,73 +297,116 @@
         });
 
         const categoriaBeleza = document.querySelector(
-            '.categoria[data-categoria="beleza"]'
-        );
+    '.categoria[data-categoria="beleza"]'
+);
 
-        categoriaBeleza.addEventListener("click", function () {
+categoriaBeleza.addEventListener("click", function () {
 
-            cardsNegocios.forEach(function (card) {
+    cardsNegocios.forEach(function (card) {
 
-                if (card.dataset.categoria === "beleza") {
-                    card.style.display = "";
-                } else {
-                    card.style.display = "none";
-                }
+        if (card.dataset.categoria === "beleza") {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
 
+    });
+
+    const belezaFuncional = document.getElementById("beleza-funcional");
+
+    if (belezaFuncional) {
+        setTimeout(function () {
+            belezaFuncional.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
             });
+        }, 100);
+    }
 
-        });
+});
 
         const categoriaSemijoias = document.querySelector(
-            '.categoria[data-categoria="semijoias"]'
-        );
+    '.categoria[data-categoria="semijoias"]'
+);
 
-        categoriaSemijoias.addEventListener("click", function () {
+categoriaSemijoias.addEventListener("click", function () {
 
-            cardsNegocios.forEach(function (card) {
+    cardsNegocios.forEach(function (card) {
 
-                if (card.dataset.categoria === "semijoias") {
-                    card.style.display = "";
-                } else {
-                    card.style.display = "none";
-                }
+        if (card.dataset.categoria === "semijoias") {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
 
-            });
+    });
 
+    const missara = document.getElementById("missara");
+
+if (missara) {
+    setTimeout(function () {
+        missara.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
         });
+    }, 100);
+}
 
+});
         const categoriaSaboaria = document.querySelector(
-            '.categoria[data-categoria="saboaria"]'
-        );
+    '.categoria[data-categoria="saboaria"]'
+);
 
-        categoriaSaboaria.addEventListener("click", function () {
+categoriaSaboaria.addEventListener("click", function () {
 
-            cardsNegocios.forEach(function (card) {
+    cardsNegocios.forEach(function (card) {
 
-                if (card.dataset.categoria === "saboaria") {
-                    card.style.display = "";
-                } else {
-                    card.style.display = "none";
-                }
+        if (card.dataset.categoria === "saboaria") {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
 
-            });
+    });
 
+    const momentomeu = document.getElementById("momentomeu");
+
+if (momentomeu) {
+    setTimeout(function () {
+        momentomeu.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
         });
+    }, 100);
+}
+
+});
 
 
         const categoriaTodos = document.querySelector(
-            '.categoria[data-categoria="todos"]'
-        );
+    '.categoria[data-categoria="todos"]'
+);
 
-        categoriaTodos.addEventListener("click", function () {
+categoriaTodos.addEventListener("click", function () {
 
-            cardsNegocios.forEach(function (card) {
-                card.style.display = "";
+    cardsNegocios.forEach(function (card) {
+        card.style.display = "";
+    });
+
+    campoBusca.value = "";
+
+    const negocios = document.getElementById("negocios");
+
+    if (negocios) {
+        setTimeout(function () {
+            negocios.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
             });
+        }, 100);
+    }
 
-            campoBusca.value = "";
-
-        });
+});
 
 
     </script>
