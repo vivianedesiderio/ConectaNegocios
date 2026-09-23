@@ -1064,3 +1064,11 @@ nav .btn-cadastro:hover {
 .botao-interesse-produto:hover {
     opacity: 0.9;
 }
+
+/* Imagem vertical da Beleza Funcional */
+.card-produto img.imagem-produto-completa {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
